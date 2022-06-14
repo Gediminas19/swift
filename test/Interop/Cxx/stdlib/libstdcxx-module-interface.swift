@@ -26,3 +26,5 @@
 // CHECK-STRING:   typealias string = std.{{__cxx11.__CxxTemplateInstNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE|__CxxTemplateInstSs}}
 // CHECK-STRING:   typealias wstring = std.{{__cxx11.__CxxTemplateInstNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE|__CxxTemplateInstSbIwSt11char_traitsIwESaIwEE}}
 // CHECK-STD: }
+
+// RUN: %target-swift-ide-test -print-module -module-to-print=std -sdk / -Xcc --gcc-toolchain=/usr -source-filename=x -enable-experimental-cxx-interop -module-cache-path %t > %t/interface.swift
