@@ -242,13 +242,6 @@ OptionalBridgedOperand Operand_nextUse(BridgedOperand);
 BridgedInstruction Operand_getUser(BridgedOperand);
 SwiftInt Operand_isTypeDependent(BridgedOperand);
 
-#ifndef myonce
-#define myonce
-void printStrSizeInline() {
-  printf("sizeof %lu \n", sizeof(std::string));
-  fflush(stdout);
-}
-#endif
 void printStrSize();
 std::string SILNode_debugDescription(BridgedNode node);
 OptionalBridgedOperand SILValue_firstUse(BridgedValue value);
