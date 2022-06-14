@@ -243,7 +243,8 @@ BridgedInstruction Operand_getUser(BridgedOperand);
 SwiftInt Operand_isTypeDependent(BridgedOperand);
 
 void printStrSizeInline() {
-  llvm::errs() << "sizeof " << sizeof(std::string) << "\n";
+  printf("sizeof %lu \n", sizeof(std::string));
+  fflush(stdout);
 }
 void printStrSize();
 std::string SILNode_debugDescription(BridgedNode node);
