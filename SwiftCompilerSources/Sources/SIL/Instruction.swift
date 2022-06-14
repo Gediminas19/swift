@@ -39,6 +39,7 @@ public class Instruction : ListNode, CustomStringConvertible, Hashable {
 
   final public var description: String {
 //    printStrSize()
+    let x = std.string()
     return String(_cxxString: SILNode_debugDescription(bridgedNode))
   }
 
