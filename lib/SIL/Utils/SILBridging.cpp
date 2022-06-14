@@ -337,7 +337,7 @@ void printStrSize() {
 }
 
 std::string SILNode_debugDescription(BridgedNode node) {
-//  printStrSize();
+  printStrSize();
   std::string str;
   llvm::raw_string_ostream os(str);
   castToSILNode(node)->print(os);
